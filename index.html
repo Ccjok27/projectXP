@@ -4,137 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eclipse - Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --eclipse-color: #000;
-            --corona-color: rgba(255, 180, 80, 0.6); 
-            --highlight-color: #fffbdf;
-            --text-color: #ffb86c;
-            --bg-dark: #050505;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-color);
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background-image: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
-        }
-
-        /* 顶部导航 */
-        nav {
-            position: absolute;
-            top: 30px;
-            display: flex;
-            gap: 40px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 3px;
-            opacity: 0.6;
-            transition: 0.3s;
-        }
-        nav a:hover { opacity: 1; }
-
-        /* 日食容器 */
-        .container {
-            position: relative;
-            width: 400px;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* 外层日晕 */
-        .corona {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--corona-color) 0%, rgba(255,150,50,0.2) 50%, transparent 70%);
-            filter: blur(15px);
-            animation: pulse 4s infinite alternate;
-        }
-
-        /* 核心黑体 */
-        .eclipse {
-            position: relative;
-            width: 320px;
-            height: 320px;
-            background: var(--eclipse-color);
-            border-radius: 50%;
-            z-index: 2;
-            box-shadow: 
-                0 0 60px rgba(255, 160, 50, 0.4),
-                inset 2px 2px 20px rgba(255,255,255,0.05);
-        }
-
-        /* 贝利珠（强光点） */
-        .eclipse::after {
-            content: '';
-            position: absolute;
-            top: 10%;
-            left: 15%;
-            width: 15px;
-            height: 15px;
-            background: var(--highlight-color);
-            border-radius: 50%;
-            filter: blur(2px);
-            box-shadow: 0 0 30px 10px var(--highlight-color);
-        }
-
-        /* 居中文字 */
-        .content {
-            position: absolute;
-            z-index: 3;
-            text-align: center;
-            pointer-events: none;
-        }
-
-        h1 {
-            font-family: 'Poiret One', cursive;
-            font-size: 42px;
-            letter-spacing: 15px;
-            text-transform: uppercase;
-            margin: 0;
-            color: var(--text-color);
-            text-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        /* 底部按钮 */
-        .btn {
-            position: absolute;
-            bottom: 50px;
-            padding: 10px 35px;
-            border: 1px solid var(--text-color);
-            border-radius: 30px;
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: var(--text-color);
-            color: #000;
-        }
-
-        @keyframes pulse {
-            from { transform: scale(1); opacity: 0.8; }
-            to { transform: scale(1.1); opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -148,11 +18,11 @@
         <div class="corona"></div>
         <div class="eclipse"></div>
         <div class="content">
-            <h1>COMING<br>SOON</h1>
+            <h1>Coming<br>Soon</h1>
         </div>
     </div>
 
-    <a href="#" class="btn">Learn More</a>
+    <a href="#" class="learn-more">Learn More</a>
 
 </body>
 </html>
