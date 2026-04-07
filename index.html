@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计工作室</title>
     <style>
         /* 全局重置 */
         * {
@@ -15,7 +16,7 @@
         /* 全局样式 */
         body {
             background-color: #000000;
-            color: #D4AF37; /* 金色主色，完美还原原图质感 */
+            color: #FFFFFF; /* 银白色 */
             overflow-x: hidden;
         }
 
@@ -33,33 +34,9 @@
             background: transparent;
         }
 
+        /* 导航左侧清空（无LOGO） */
         .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .logo-circle {
             width: 20px;
-            height: 20px;
-            border: 2px solid #D4AF37;
-            border-radius: 50%;
-            position: relative;
-        }
-
-        .logo-circle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background-color: #D4AF37;
-            border-radius: 50%;
         }
 
         .nav-center {
@@ -71,7 +48,7 @@
         }
 
         .nav-center a {
-            color: #D4AF37;
+            color: #FFFFFF;
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
@@ -89,7 +66,7 @@
         .search-icon {
             width: 18px;
             height: 18px;
-            border: 2px solid #D4AF37;
+            border: 2px solid #FFFFFF;
             border-radius: 50%;
             position: relative;
             cursor: pointer;
@@ -102,28 +79,28 @@
             right: -6px;
             width: 8px;
             height: 2px;
-            background-color: #D4AF37;
+            background-color: #FFFFFF;
             transform: rotate(-45deg);
         }
 
         .sign-in-btn {
             padding: 6px 18px;
-            border: 1px solid #D4AF37;
+            border: 1px solid #FFFFFF;
             border-radius: 20px;
             font-size: 12px;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #D4AF37;
+            color: #FFFFFF;
             transition: all 0.3s ease;
         }
 
         .sign-in-btn:hover {
-            background-color: #D4AF37;
+            background-color: #FFFFFF;
             color: #000;
         }
 
-        /* 主视觉区 + 日食光晕（纯CSS手绘，无图片） */
+        /* 主视觉区 + 日食光晕 */
         .hero {
             width: 100vw;
             height: 100vh;
@@ -144,8 +121,8 @@
             border-radius: 50%;
             background: radial-gradient(
                 circle at 30% 30%,
-                #D4AF37 0%,
-                #B8860B 20%,
+                #FFFFFF 0%,
+                #E5E5E5 20%,
                 transparent 50%,
                 transparent 100%
             );
@@ -154,7 +131,7 @@
             z-index: 1;
         }
 
-        /* 黑色遮挡，完美模拟日食效果 */
+        /* 黑色遮挡，模拟日食效果 */
         .eclipse::after {
             content: '';
             position: absolute;
@@ -166,19 +143,20 @@
             background-color: #000;
         }
 
-        /* 主标题（还原空心描边+发光效果） */
+        /* 主标题：缩小一倍 + 银白色 + 向下移动 */
         .main-title {
             position: relative;
             z-index: 2;
-            font-size: 72px;
+            font-size: 36px;
             font-weight: 300;
             letter-spacing: 12px;
             text-transform: uppercase;
-            color: #D4AF37;
+            color: #FFFFFF;
             text-align: center;
             line-height: 1.2;
-            -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            margin-top: 120px; /* 核心：让文字下移 */
         }
 
         /* Learn More按钮 */
@@ -187,7 +165,7 @@
             z-index: 2;
             margin-top: 80px;
             padding: 8px 22px;
-            background-color: #D4AF37;
+            background-color: #FFFFFF;
             color: #000;
             border: none;
             border-radius: 20px;
@@ -202,10 +180,10 @@
 
         .learn-more-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         }
 
-        /* 响应式适配（手机端完美显示） */
+        /* 响应式适配 */
         @media (max-width: 768px) {
             nav {
                 padding: 20px 30px;
@@ -221,8 +199,9 @@
             }
 
             .main-title {
-                font-size: 36px;
+                font-size: 24px;
                 letter-spacing: 6px;
+                margin-top: 80px;
             }
 
             .eclipse {
@@ -233,12 +212,9 @@
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 导航栏：无LOGO、无文字，极简样式 -->
     <nav>
-        <div class="nav-left">
-            <div class="logo-circle"></div>
-            <span>【你的品牌名】</span>
-        </div>
+        <div class="nav-left"></div>
         <div class="nav-center">
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
