@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* 日食效果 */
+        .eclipse-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sun-glow {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, #ffaa00 0%, transparent 70%);
+            filter: blur(20px);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        .moon {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #0a0a0a;
+            border-radius: 50%;
+            box-shadow: inset -10px -10px 20px rgba(255,170,0,0.1);
+            z-index: 2;
+        }
+        /* 文字内容 */
+        .content {
+            position: absolute;
+            z-index: 3;
+            text-align: center;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 300;
+            margin: 0;
+            color: #ffaa00;
+            text-shadow: 0 0 10px rgba(255,170,0,0.5);
+        }
+        .nav {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        .btn {
+            position: absolute;
+            bottom: 60px;
+            padding: 10px 25px;
+            border: 1px solid #ffaa00;
+            color: #ffaa00;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #ffaa00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <span>HOME</span>
+        <span>ABOUT</span>
+        <span>CONTACT</span>
+    </div>
+
+    <div class="eclipse-container">
+        <div class="sun-glow"></div>
+        <div class="moon"></div>
+        <div class="content">
+            <h1>Coming<br>Soon</h1>
+        </div>
+    </div>
+
+    <a href="#" class="btn">LEARN MORE</a>
+</body>
+</html>
